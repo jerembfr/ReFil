@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suivie du projet</title>
+<meta name="description" content="Une chaîne écologique locale qui transforme les déchets plastiques en filament pour imprimante 3D.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10241f; --paper:#f1f5f2; --line:#c9d6cf; --green:#1fb58f; --sun:#f2b705; --muted:#4d625a;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Figtree","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#eaf2ee; --paper:#0d1a16; --line:#25403a; --muted:#9db3aa;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800;letter-spacing:-.03em}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;letter-spacing:-.02em;margin-bottom:1rem}
+h3{font-size:1.3rem;font-weight:800;margin-bottom:.4rem}
+p{margin:0 0 1rem;max-width:62ch}
+section{padding:5rem 0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-weight:600}
+nav a{text-decoration:none;margin-left:1.4rem}
+nav a:hover{color:var(--green)}
+.logo{font-family:var(--display);font-weight:800;font-size:1.2rem;margin:0}
+
+/* Hero */
+.hero{padding:3rem 0 2rem}
+.hero p.lead{font-size:1.25rem;color:var(--muted);margin-top:1.5rem}
+.hero em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--green);border-color:var(--green);color:#06231b}
+.btn:hover{transform:translateY(-2px)}
+.chain{width:100%;height:auto;margin-top:2.5rem;display:block}
+.chain .thread{stroke:var(--green);stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s .3s ease-out forwards}
+.chain text{font-family:var(--body);font-size:15px;font-weight:600;fill:var(--ink)}
+.chain .node{fill:var(--paper);stroke:var(--ink);stroke-width:3}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* Problème */
+.problem{background:var(--ink);color:var(--paper)}
+.problem p{color:inherit;opacity:.85}
+.problem .grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem}
+.problem .fig{font-family:var(--display);font-size:3rem;font-weight:800;color:var(--sun);line-height:1}
+@media (prefers-color-scheme:dark){.problem{background:#142b25;color:#eaf2ee}}
+
+/* Étapes : vraie séquence, donc numérotée */
+.steps{list-style:none;margin:2.5rem 0 0;padding:0;border-left:4px solid var(--green)}
+.steps li{position:relative;padding:0 0 2.2rem 2rem}
+.steps li::before{content:attr(data-n);position:absolute;left:-1.55rem;top:-.1rem;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--paper);border:4px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1rem}
+.steps p{color:var(--muted);margin:0}
+
+/* Bénéfices */
+.benefits{display:grid;gap:2.5rem 3rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:2rem}
+.benefits div{border-top:3px solid var(--sun);padding-top:1rem}
+.benefits p{color:var(--muted);margin:0}
+
+/* Contact */
+.contact{background:var(--green);color:#06231b}
+.contact h2{color:#06231b}
+.contact .btn{border-color:#06231b;background:#06231b;color:#f1f5f2}
+footer{padding:2rem 0;color:var(--muted);font-size:.9rem}
+@media (max-width:640px){nav a{margin-left:.9rem}.hide-sm{display:none}}
+@media (prefers-reduced-motion:reduce){.chain .thread{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav aria-label="Navigation principale">
+    <p class="logo">ReFil</p>
+    <div>
+      <a href="./index.html" class="hide-sm">Le problème</a>
+      <a href="./index.html#probleme">La chaîne</a>
+      <a href="./index.html#benefices" class="hide-sm">Bénéfices</a>
+      <a href="./index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <!-- Div qui vas mettre les debut du projet avec les prototype ainsi que les idées de bases -->
+  </div>
+</section>
+
+<section id="probleme" class="problem">
+  <div class="wrap">
+    <!--  des petittes photos du debut ainsi que le resultat des premiers test ainsi que des expérience -->
+  </div>
+</section>
+
+<section id="chaine">
+  <div class="wrap">
+    <
+  </div>
+</section>
+
+<section id="benefices" style="padding-top:1rem">
+  <div class="wrap">
+    
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>© 2026 — Projet ReFil. Fait avec du plastique recyclé.</p>
+</footer>
+
+</body>
+</html>
+</title>
+</head>
+<body>
+    
+</body>
+</html>
